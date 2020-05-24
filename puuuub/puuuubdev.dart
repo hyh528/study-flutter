@@ -5,5 +5,5 @@ main() async {
   final response = await http.Client().get(Uri.parse('https://example.com/'));
 
   var document = parse(response.body);
-  print(document.outerHtml);
+  print(document.getElementsByTagName('title')[0].innerHtml);
 }
